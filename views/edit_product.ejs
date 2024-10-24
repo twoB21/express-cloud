@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edit Product</title>
+  </head>
+  <body>
+    <h1>Edit Product</h1>
+    <form action="/admins/edit/<%= product.id %>" method="POST">
+      <label for="product_name">Product Name:</label>
+      <input type="text" id="product_name" name="product_name" value="<%= product.product_name %>">
+      <br>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" value="<%= product.amount %>">
+      <br>
+      <label for="price">Price:</label>
+      <input type="number" id="price" name="price" value="<%= product.price %>">
+      <br>
+      <label for="shop_id">Shop ID:</label>
+      <input type="number" id="shop_id" name="shop_id" value="<%= product.shop_id %>">
+      <br>
+      <button type="submit">Update</button>
+    </form>
+    <a href="/admins">Back to Admin Page</a>
+  </body>
+</html>
